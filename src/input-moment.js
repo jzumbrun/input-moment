@@ -15,8 +15,8 @@ module.exports = React.createClass({
 
   getDefaultProps() {
     return {
-      prevMonthIcon: 'ion-ios-arrow-left',
-      nextMonthIcon: 'ion-ios-arrow-right'
+      prevMonthIcon: 'glyphicon glyphicon-menu-left',
+      nextMonthIcon: 'glyphicon glyphicon-menu-right'
     };
   },
 
@@ -50,9 +50,8 @@ module.exports = React.createClass({
           />
         </div>
 
-        <button type="button" className="im-btn btn-save ion-checkmark"
-          onClick={this.handleSave}>
-          Save
+        <button type="button" className="im-btn btn-save glyphicon glyphicon-ok"
+          onClick={this.handleSet}>
         </button>
       </div>
     );
@@ -63,8 +62,8 @@ module.exports = React.createClass({
     this.setState({tab: tab});
   },
 
-  handleSave(e) {
+  handleSet(e) {
     e.preventDefault();
-    if(this.props.onSave) this.props.onSave();
+    if(this.props.onSet) this.props.onSet();
   }
 });
